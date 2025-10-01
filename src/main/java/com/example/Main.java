@@ -23,5 +23,16 @@ public class Main {
 
         BufferedReader in = new BufferedReader(new InputStreamReader(mioSocket.getInputStream()));
         PrintWriter out = new PrintWriter(mioSocket.getOutputStream(), true);
+   
+        System.out.println("inserisci la stringa");
+        String stringadainviare = myObj.nextLine();
+        out.println(stringadainviare);
+
+        String stringClient = in.readLine();
+
+        System.out.println("la stringa ricevuta dal server e" + stringClient);
+   
+   
     }
+
 }
